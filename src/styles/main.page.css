@@ -1,0 +1,68 @@
+* {
+    color: var(--light-1);
+}
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading {
+    text-align: center;
+}
+
+.user-card {
+    display: grid;
+    gap: 20px;
+    max-width: 500px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-info {
+    display: grid;
+    gap: 20px;
+}
+
+.user-info > div {
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    gap: 30px;
+    padding-bottom: 8px;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--blue-1);
+}
+
+.user-info > div > h3:first-of-type {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.user-info > div > h3:not(:first-of-type) {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.user-actions a {
+    display: block;
+    color: var(--light-0);
+    background-color: var(--blue-2);
+    padding: var(--btnPadding);
+}
+
+.user-actions {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+form#change {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    min-width: 320px;
+}

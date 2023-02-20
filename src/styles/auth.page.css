@@ -1,0 +1,75 @@
+body {
+    max-height: 100vh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-method-heading {
+    color: var(--light-0);
+    margin-bottom: 30px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.tabs-wrapper {
+    width: 350px;
+    max-height: 600px;
+    border-radius: var(--bradius);
+    background-color: var(--dark-2);
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.2s all;
+}
+
+.tabs-panel-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--light-0);
+}
+
+.tabs-panel-controls > div {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tabs-panel-controls > div:hover {
+   background-color: var(--light-2);
+}
+
+.tabs-line {
+    display: flex;
+    height: 2px;
+    background-color: var(--light-2);
+    border-radius: var(--bradius);
+    overflow: hidden;
+}
+
+.tabs-line-inner {
+    height: 2px;
+    background-color: var(--blue-1);
+    transition: all 0.5s;
+}
+
+.tabs {
+    display: grid;
+    width: 200%;
+    grid-template-columns: 1fr 1fr;
+    transition: all 0.2s;
+}
+
+.tabs > form {
+    position: relative;
+    display: grid;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 25px;
+    padding: 25px 30px 40px;
+}

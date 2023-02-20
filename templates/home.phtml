@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<?php require __DIR__ . '/parts/generalStyleLinks.phtml' ?>
+    <link href="../src/styles/main.page.css" rel="stylesheet">
+    <title>Main</title>
+    <script src="../src/scripts/home.page.js" type="module" defer></script>
+</head>
+<body>
+    <?php require __DIR__ . '/parts/noScript.phtml' ?>
+    <main>
+        <h1 class="heading">Hello, <span class="user-name"><?php echo $_SESSION['USER_DATA']['name'] ?></span></h1>
+        <div class="user-card">
+            <div class="user-info">
+                <div>
+                    <h3>Name:</h3>
+                    <h3 class="user-name"><?php echo $_SESSION['USER_DATA']['name'] ?></h3>
+                    <button class="btn btn-warn" data-trigger data-change="name">Change</button>
+                </div>
+                <div>
+                    <h3>Login:</h3>
+                    <h3 class="user-login"><?php echo $_SESSION['USER_DATA']['login'] ?></h3>
+                    <button class="btn btn-warn" data-trigger data-change="login">Change</button>
+                </div>
+                <div>
+                    <h3>Email:</h3>
+                    <h3 class="user-email"><?php echo $_SESSION['USER_DATA']['email'] ?></h3>
+                    <button class="btn btn-warn" data-trigger data-change="email">Change</button>
+                </div>
+            </div>
+            <div class="user-actions">
+                <a href="/app/auth/logout" class="btn">Logout</a>
+                <button class="btn btn-error" data-trigger="delete">Delete account</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

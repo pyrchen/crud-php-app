@@ -1,0 +1,219 @@
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    background-color: var(--dark-1);
+    min-height: 100vh;
+    color: white !important;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--blue-1);
+}
+
+*::-webkit-scrollbar {
+    width: 3px;
+    background-color: var(--dark-0);
+}
+
+.btn {
+    padding: var(--btnPadding);
+    color: var(--light-0);
+    border-radius: var(--bradius);
+    background-color: var(--blue-2);
+}
+
+.btn.btn-warn {
+    background-color: var(--yellow-1);
+}
+
+.btn.btn-warn:hover {
+    background-color: #838300;
+}
+
+.btn.btn-error {
+    background-color: var(--red-1);
+}
+
+.btn.btn-error:hover {
+    background-color: #b41414;
+}
+
+.btn:hover {
+    background-color: var(--blue-3);
+}
+
+.btn.btn-loader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn:disabled {
+    background-color: var(--blue-1);
+    cursor: default;
+}
+
+.btn:disabled :hover {
+    background-color: var(--blue-1);
+}
+
+.loader-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translateX(-100%);
+    transition: all 0.2s;
+}
+
+.loader-wrapper > div {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: var(--light-0);
+}
+
+.loader-wrapper > div > div:nth-of-type(1) {
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+.loader-item:after {
+    content: " ";
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin: 8px;
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--light-0) transparent;
+    animation: loader-animate 1.2s linear infinite;
+}
+
+.input_field {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 8px;
+}
+
+.input_field label {
+    margin-left: 3px;
+    color: var(--light-1);
+    text-transform: capitalize;
+}
+
+.input_field input {
+    padding: var(--btnPadding);
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: var(--bradius);
+    color: var(--light-1);
+    background-color: var(--dark-0);
+}
+
+.input_field input:-webkit-autofill,
+.input_field input:-webkit-autofill:hover,
+.input_field input:-webkit-autofill:focus,
+.input_field input:-webkit-autofill:active{
+    -webkit-text-fill-color: var(--light-1);
+    -webkit-box-shadow: 0 0 0 200px var(--dark-0) inset;
+}
+
+.input_field .input_error {
+    margin: 0 2px;
+    font-size: 12px;
+    color: var(--red-1);
+    line-height: 14px;
+}
+
+.input_field.with-error input {
+    border-color: var(--red-1);
+}
+
+.modal-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s all;
+}
+
+.modal-window {
+    position: relative;
+    border-radius: var(--bradius);
+    background-color: var(--dark-2);
+    padding: 20px;
+}
+
+.modal-close.modal-close-default {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 12px;
+    padding: 6px 8px;
+}
+
+.modal-wrapper.closed {
+    opacity: 0;
+    overflow: initial;
+    z-index: -1;
+}
+
+.alerts-container {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    width: 300px;
+    display: grid;
+    gap: 10px;
+}
+
+.alert {
+    padding: 20px;
+    word-break: break-word;
+    font-size: 16px;
+    border-radius: var(--bradius);
+    transition: all 0.2s;
+}
+
+.alert.alert-success {
+    background-color: var(--green-1);
+}
+
+.alert.alert-warning {
+    background-color: var(--yellow-1);
+}
+
+.alert.alert-error {
+    background-color: var(--red-1);
+}
+
+@keyframes loader-animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

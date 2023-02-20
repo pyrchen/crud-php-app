@@ -1,0 +1,17 @@
+:root {
+    --dark-0: rgb(1, 3, 7);
+    --dark-1: rgb(10, 14, 18);
+    --dark-2: rgb(18, 22, 27);
+    --light-0: rgb(202, 225, 244);
+    --light-1: rgb(203, 198, 192);
+    --light-2: rgba(57, 66, 76, 0.08);
+    --blue-0: rgb(0, 71, 154);
+    --blue-1: rgb(0, 88, 190);
+    --blue-2: rgb(16, 81, 181);
+    --blue-3: #0249aa;
+    --red-1: #f8463d;
+    --green-1: #007500;
+    --yellow-1: #9b9b00;
+    --bradius: 5px;
+    --btnPadding: 10px 12px;
+}
